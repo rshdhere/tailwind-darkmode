@@ -16,7 +16,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body
+        className={`${inter.className} antialiased [--pattern-fg:var(--color-neutral-900)]/5`}
+      >
+        <main className="bg-background text-foreground h-screen">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
